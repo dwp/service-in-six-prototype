@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-xl">Personal details</span>
+        Do you want to add a different address for your post?
+      </h1>
+
+      <form action="address-postal-address" method="post" novalidate>
+
+        {{ govukRadios({
+            idPrefix: 'details-add-different-postal-address',
+            name: 'detailsAddDifferentPostalAddress',
+            classes: "govuk-radios--inline",
+            items: [
+                {
+                    value: "yes~address-postal-address",
+                    text: "Yes"                },
+                {
+                    value: "no~/nsjsa/to-do",
+                    text: "No"                }
+            ]
+          })
+        }}
+
+        {{ govukButton({
+            text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

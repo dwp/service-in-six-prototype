@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper" id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <nav id="app-menu" class="claimant-tabbed-navigation" aria-label="Site navigation">
+                        <ul class="claimant-tabbed-navigation__list">
+                            <li class="claimant-tabbed-navigation__item ">
+                                <a href="#" class="claimant-tabbed-navigation__link">Home</a>
+                            </li>
+                            <li class="claimant-tabbed-navigation__item active">
+                                <a href="#" id="to-do-tab" class="claimant-tabbed-navigation__link">To-do list</a>
+                            </li>
+                            <li class="claimant-tabbed-navigation__item ">
+                                <a href="#" class="claimant-tabbed-navigation__link">Journal</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <h1 class="govuk-heading-xl">Before you continue</h1>
+
+                    <p class="govuk-body">Your answers may be shared with your work coach to help them understand if you need any additional support.</p>
+                    <p class="govuk-body">These questions are optional.</p>
+                    <div class="govuk-inset-text">
+  The answers you give will not affect your New Style application or payments.
+</div>
+
+                    <form action="declaration" method="POST">
+
+                        {{ govukRadios({
+  classes: "govuk-radios--inline",
+  name: "changedName",
+  fieldset: {
+    legend: {
+      text: "Did anyone help you make your claim?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    text: "For example, a family member, friend or someone from the jobcentre or a charity."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+                        <div class="govuk-button-group">
+                            {{ govukButton({
+    text: "Done",
+    href: "feedback-b"
+  }) }}
+
+                            <a class="govuk-link" href="feedback-b">Skip</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+{% endblock %}

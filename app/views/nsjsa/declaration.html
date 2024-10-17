@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper" id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <nav id="app-menu" class="claimant-tabbed-navigation" aria-label="Site navigation">
+                        <ul class="claimant-tabbed-navigation__list">
+                            <li class="claimant-tabbed-navigation__item active">
+                                <a href="#" id="to-do-tab" class="claimant-tabbed-navigation__link">To-do list</a>
+                            </li>
+                            <li class="claimant-tabbed-navigation__item ">
+                                <a href="#" class="claimant-tabbed-navigation__link">Journal</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <h1 class="govuk-heading-xl">Declaration</h1>
+
+                    <p class="govuk-body">By submitting this claim you agree that the information you’ve given is complete and correct. While you’re receiving Jobseeker’s Allowance, you’ll report changes to your circumstances straight away. If you give wrong or incomplete information, or you don’t report changes, you may:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>be prosecuted</li>
+                        <li>need to pay a financial penalty </li>
+                        <li>have your New Style Jobseeker’s Allowance reduced or stopped </li>
+                        <li>be paid too much Jobseeker’s Allowance and have to pay the money back</li>
+                    </ul>
+
+                    <form action="declaration" method="POST">
+
+                        <h2 class="govuk-heading-m">I have read and understood this declaration</h2>
+                        {{ govukCheckboxes({
+              idPrefix: "confirm",
+              name: "confirm",
+              items: [
+                  {
+                      value: "confirm",
+                      text: "I agree to this declaration"
+                  }
+              ]
+          }) }}
+
+                        {{ govukButton({
+              text: "Submit application",
+              href: "/feedback/what-happens-next"
+          }) }}
+
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+{% endblock %}

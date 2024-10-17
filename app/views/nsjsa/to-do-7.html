@@ -1,0 +1,125 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <nav id="app-menu" class="claimant-tabbed-navigation" aria-label="Site navigation">
+            <ul class="claimant-tabbed-navigation__list">
+              <li class="claimant-tabbed-navigation__item active">
+                <a href="#" id="to-do-tab" class="claimant-tabbed-navigation__link">To-do list</a>
+              </li>
+              <li class="claimant-tabbed-navigation__item ">
+                <a href="#" class="claimant-tabbed-navigation__link">Journal</a>
+              </li>
+            </ul>
+          </nav>
+
+          {# <nav id="app-menu" class="claimant-tabbed-navigation" aria-label="Site navigation">
+            <ul class="claimant-tabbed-navigation__list">
+              <li class="claimant-tabbed-navigation__item ">
+                <a href="#" class="claimant-tabbed-navigation__link">Home</a>
+              </li>
+              <li class="claimant-tabbed-navigation__item active">
+                <a href="#" id="to-do-tab" class="claimant-tabbed-navigation__link">To-do list</a>
+              </li>
+              <li class="claimant-tabbed-navigation__item ">
+                <a href="#" class="claimant-tabbed-navigation__link">Journal</a>
+              </li>
+            </ul>
+          </nav> #}
+
+          <div class="govuk-inset-text-uc">
+            <strong>Current work</strong><br>You have completed this to-do.
+          </div>
+
+          <p class="govuk-body govuk-!-margin-top-7 govuk-!-margin-bottom-7">You have <strong>4</strong> to-dos to complete</p>
+
+          <ul class="govuk-task-list">
+            {# <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="2-claim-start/start-date" aria-describedby="company-details-1-status">
+        Claim start date 
+      </a>
+              </div>
+
+            </li>
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="3-details/nino" aria-describedby="company-details-2-status">
+        Personal details
+      </a>
+              </div>
+
+            </li>
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="3-details/bank-account#" aria-describedby="company-details-3-hint company-details-3-status">
+        Bank account details
+      </a>
+              </div>
+            </li>
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="4-other-benefits/guard" aria-describedby="company-details-4-status">
+        Other benefits
+      </a>
+              </div>
+            </li>
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="5-jury-service/have-been" aria-describedby="company-details-5-status">
+        Jury service
+      </a>
+              </div>
+            </li>
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="6-current-employment/guard" aria-describedby="company-details-5-status">
+        Current work
+      </a>
+              </div>
+            </li> #}
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="7-previous-employment/job-ended-last-six-months" aria-describedby="company-details-5-status">
+        Previous employment
+      </a>
+              </div>
+            </li>
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="8-abroad/guard" aria-describedby="company-details-5-status">
+        Time spent abroad
+      </a>
+              </div>
+            </li>
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="9-pensions/9a-current-pension/guard" aria-describedby="company-details-5-status">
+        Pension or annuity
+      </a>
+              </div>
+            </li>
+            <li class="govuk-task-list-uc__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list-uc__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="10-education/guard" aria-describedby="company-details-5-status">
+        Education or training
+      </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
