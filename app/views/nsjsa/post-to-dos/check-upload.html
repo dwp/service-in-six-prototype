@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper" id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <nav id="app-menu" class="claimant-tabbed-navigation" aria-label="Site navigation">
+                        <ul class="claimant-tabbed-navigation__list">
+                            <li class="claimant-tabbed-navigation__item ">
+                                <a href="#" class="claimant-tabbed-navigation__link">Home</a>
+                            </li>
+                            <li class="claimant-tabbed-navigation__item active">
+                                <a href="#" id="to-do-tab" class="claimant-tabbed-navigation__link">To-do list</a>
+                            </li>
+                            <li class="claimant-tabbed-navigation__item ">
+                                <a href="#" class="claimant-tabbed-navigation__link">Journal</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <h1 class="govuk-heading-l govuk-!-margin-top-8">
+                        <span class="govuk-caption-xl">To-do</span>
+                            Check receipt
+                    </h1>
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-two-thirds">
+                            <img src="app/assets/images/payslip.jpg" alt="payslip" width="50%">
+                        </div>
+                    </div>
+
+                    <p class="govuk-body">receipt.jpg, 2MB</p>
+
+                    <div class="govuk-form-group">
+
+                        <fieldset class="govuk-fieldset">
+
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+      Is this file correct?
+
+    </legend>
+
+                            <div class="govuk-radios" data-module="govuk-radios">
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="correct" name="correct" type="radio" value="yes">
+                                    <label class="govuk-label govuk-radios__label" for="correct">
+          Yes, add this file
+        </label>
+
+                                </div>
+
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="correct-2" name="correct" type="radio" value="no">
+                                    <label class="govuk-label govuk-radios__label" for="correct-2">
+          No, I want to choose a different file
+        </label>
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+                    </div>
+
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+                    {{ govukButton({
+              text: "Continue",
+              href: "/feedback/what-happens-next"
+          }) }}
+
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

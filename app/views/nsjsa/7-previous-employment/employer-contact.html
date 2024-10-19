@@ -1,8 +1,11 @@
-
 {% extends "layout-live-nobanner.html" %}
 
 {% block pageTitle %}
   DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
 {% endblock %}
 
 {% block content %}
@@ -17,12 +20,11 @@
 
       <form action="expect-payment" method="post">
 
-        {% call govukFieldset({
-        }) %}
+        {% call govukFieldset({}) %}
 
         <p class="govuk-hint">Supply a contact number to a person or department who will be able to confirm your employment there.</p>
 
-          {{ govukInput({
+        {{ govukInput({
             label: {
                text: ""
             },

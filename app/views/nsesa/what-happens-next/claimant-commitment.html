@@ -1,0 +1,51 @@
+{% extends "layouts/nsesa/layout.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <nav id="app-menu" class="claimant-tabbed-navigation" aria-label="Site navigation">
+            <ul class="claimant-tabbed-navigation__list">
+              <li class="claimant-tabbed-navigation__item active">
+                <a href="#" id="to-do-tab" class="claimant-tabbed-navigation__link">To-do list</a>
+              </li>
+              <li class="claimant-tabbed-navigation__item ">
+                <a href="#" class="claimant-tabbed-navigation__link">Journal</a>
+              </li>
+            </ul>
+          </nav>
+          <h1 class="govuk-heading-xl">Your responsibilities</h1>
+          <h2 class="govuk-heading-m">Thank you, Firstname</h2>
+          <div class="govuk-inset-text">
+            <strong>It's important that you understand that in return for your New Style payment, you're agreeing to look for work.</strong>
+            <p class="govuk-body govuk-!-margin-top-3">You'll need to commit to doing everything you reasonably can to find and take paid work. Your work coach will help you agree your commitments.</p>
+          </div>
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukCheckboxes({
+              idPrefix: "confirm",
+              name: "confirm",
+              items: [
+                  {
+                      value: "confirm",
+                      text: "I understand these commitments"
+                  }
+              ]
+          }) }}
+          {{ govukButton({
+  text: "Continue",
+  href: "declaration"
+}) }}
+        </div>
+      </div>
+    </main>
+  </div>
+
+{% endblock %}

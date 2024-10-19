@@ -1,0 +1,52 @@
+{% extends "layouts/nsesa/layout.html" %}
+
+{% block pageTitle %}
+ Recent Statutory Sick Pay - Apply for New Style Employment and Support Allowance - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form id="form" method="post" action="statutory-pay-end">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-xl">Statutory pay</span>
+            Have you had any Statutory Sick Pay in the 13 weeks before the date you want to claim from?
+          </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="statutory-pay-1" name="statutory-pay-recent" type="radio" value='yes~statutory-pay-end'>
+                <label class="govuk-label govuk-radios__label" for="statutory-pay-1">
+             Yes
+            </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="statutory-pay-2" name="statutory-pay-recent" type="radio" value='no~statutory-pay-other'>
+                <label class="govuk-label govuk-radios__label" for="statutory-pay-2">
+            No
+            </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+      </form>
+
+    </div>
+    <!-- govuk-grid-column-two-thirds -->
+  </div>
+  <!-- govuk-grid-row -->
+{% endblock %}

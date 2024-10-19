@@ -1,8 +1,11 @@
-
 {% extends "layout-live-nobanner.html" %}
 
 {% block pageTitle %}
   DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
 {% endblock %}
 
 {% block content %}
@@ -19,10 +22,9 @@
 
         {% set jobref = "job" + data["jobnum"] + "-" %}
         {% set fieldref = jobref + "ce-telephone-number" %}
-        {% call govukFieldset({
-        }) %}
+        {% call govukFieldset({}) %}
 
-          {{ govukInput({
+        {{ govukInput({
             label: {
               text: ""
             },

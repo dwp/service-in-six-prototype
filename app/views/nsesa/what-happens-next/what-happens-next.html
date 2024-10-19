@@ -1,0 +1,96 @@
+{% extends "layouts/nsesa/layout.html" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <nav id="app-menu" class="claimant-tabbed-navigation" aria-label="Site navigation">
+            <ul class="claimant-tabbed-navigation__list">
+              <li class="claimant-tabbed-navigation__item ">
+                <a href="#" class="claimant-tabbed-navigation__link">Home</a>
+              </li>
+              <li class="claimant-tabbed-navigation__item active">
+                <a href="#" id="to-do-tab" class="claimant-tabbed-navigation__link">To-do list</a>
+              </li>
+              <li class="claimant-tabbed-navigation__item ">
+                <a href="#" class="claimant-tabbed-navigation__link">Journal</a>
+              </li>
+            </ul>
+          </nav>
+
+          <h1 class="govuk-heading-xl">Application sent</h1>
+
+          <p class="govuk-body">We need to work out if you can get NSESA.</p>
+          <p class="govuk-body">We will contact you via the journal . We will book you a ‘Claimant Commitment’ appointment, unless your Health Practitioner has informed you that you have less than 12 months to live.</p>
+          <p class="govuk-body govuk-!-margin-bottom-6">Keep Checking your <strong>to-do list</strong> and <strong>journal</strong> for things you'll need to do for your claim.</p>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-link-gem-uc__wrapper">
+                <p class="govuk-heading-s">
+                  <a href="#" class="govuk-link">Report a change</a>
+                </p>
+                <p>Tell us if your circumstances have changed. Examples include your work situation, health or relationships.</p>
+              </div>
+
+              <div class="govuk-link-gem-uc__wrapper">
+                <p class="govuk-heading-s">
+                  <a href="#" class="govuk-link">Payments and advances
+                </a>
+                </p>
+                <p>View your payments, apply for an advance or check how much you owe.</p>
+              </div>
+              <div class="govuk-link-gem-uc__wrapper">
+                <p class="govuk-heading-s">
+                  <a href="#" class="govuk-link">Your accessibility needs</a>
+                </p>
+                <p>Tell us how we can support you.</p>
+              </div>
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-link-gem-uc__wrapper">
+                <a href="#" class="govuk-link  govuk-heading-s">Report a fit note</a>
+                <p>Submit your doctor's details and the dates they've put on your fit note.</p>
+              </div>
+
+              <div class="govuk-link-gem-uc__wrapper">
+                <a href="/nsesa/what-happens-next/post-to-dos/to-do-1" class="govuk-link  govuk-heading-s">To-do list</a>
+                <p>Check if we're asking you for any information.</p>
+              </div>
+              <div class="govuk-link-gem-uc__wrapper">
+                <a href="#" class="govuk-link  govuk-heading-s">How to manage your NSESA account</a>
+                <p>Find out how NSESA works and how to use your online acocunt.</p>
+              </div>
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-link-gem-uc__wrapper">
+                <a href="#" class="govuk-link  govuk-heading-s">Make a journal entry</a>
+                <p>Record your activity, let us know about appointments and send or receive messages.</p>
+
+                <div class="govuk-link-gem-uc__wrapper">
+                  <a href="#" class="govuk-link  govuk-heading-s">Work search</a>
+                  <p>Guidance and tools to help you search and apply for jobs.</p>
+                  <div class="govuk-link-gem-uc__wrapper">
+                    <a href="#" class="govuk-link  govuk-heading-s">Request to close your claim</a>
+                    <p>How to end your NSESA claim.</p>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </main>
+        </div>
+
+      {% endblock %}

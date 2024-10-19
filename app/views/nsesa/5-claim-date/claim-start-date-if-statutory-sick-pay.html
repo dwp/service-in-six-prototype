@@ -1,0 +1,53 @@
+{% extends "layouts/nsesa/layout.html" %}
+
+{% block pageTitle %}
+ Recent Statutory Sick Pay - Apply for New Style Employment and Support Allowance - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form id="form" method="post" action="statutory-sick-pay">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Claim date</span>
+              <h1 class="govuk-fieldset__heading">Do you want to claim from <span class="suggested-claim-date" data-year="{{ data['ssp-year'] }}" data-month="{{ data['ssp-month'] }}" data-day="{{ data['ssp-day'] }}"></span>?</h1>
+
+            </legend>
+
+            <p>This is the day after your Statutory Sick Pay end date. You can choose a later date, but you cannot get New Style ESA and Statutory Sick Pay at the same time.</p>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="statutory-pay-1" name="claim-date-statutory-pay" type="radio" value='yes~/nsesa/to-dos/to-do-6'>
+                <label class="govuk-label govuk-radios__label" for="statutory-pay-1">
+             Yes
+            </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="statutory-pay-2" name="claim-date-statutory-pay" type="radio" value='no~claimdate-new'>
+                <label class="govuk-label govuk-radios__label" for="statutory-pay-2">
+            No
+            </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+      </form>
+
+    </div>
+    <!-- govuk-grid-column-two-thirds -->
+  </div>
+  <!-- govuk-grid-row -->
+{% endblock %}

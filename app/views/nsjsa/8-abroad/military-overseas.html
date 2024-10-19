@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Recently lived abroad - Apply for New Style Employment and Support Allowance - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form id="form" method="post" action="pension">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" >
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-xl">Time spent abroad</span>
+            Have you lived abroad with your partner who was posted there with the armed forces?
+            </h1>
+            </legend>
+            <div class="govuk-hint">
+              <span class="govuk-hint">You may have been awarded National Insurance credits through the Ministry of Defence if your partner was posted overseas by the armed forces. These can help you qualify for New Style Jobseeker's Allowance.</span>
+            </div>
+
+            <p class="govuk-body">You must have:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>gone with them on their overseas posting</li>
+              <li>been their civil partner or their spouse at the time</li>
+              <li>lived with them for at least a week</li>
+            </ul>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes" name="military-overseas" type="radio" value='Yes~/nsjsa/to-do-9' data-aria-controls="conditional-how-contacted-conditional-1">
+                <label class="govuk-label govuk-radios__label" for="yes">
+                Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="no" name="military-overseas" type="radio" value='No~/nsjsa/to-do-9' data-aria-controls="conditional-how-contacted-conditional-2">
+                <label class="govuk-label govuk-radios__label" for="no">
+                  No
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- form-group -->
+
+        <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+      </form>
+
+    </div>
+    <!-- govuk-grid-column-two-thirds -->
+  </div>
+  <!-- govuk-grid-row -->
+
+{% endblock %}
