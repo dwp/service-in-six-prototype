@@ -16,26 +16,24 @@
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <span class="govuk-caption-xl">Education and training</span>
           <h1 class="govuk-fieldset__heading">
-        Have you been in education or training in the last 4 years?
+        Have you completed the course?
       </h1>
         </legend>
-        <div id="changedName-hint" class="govuk-hint">
-      Your course must be described as full-time by the education or training provider.
-    </div>
-        <form action="guard" method="post">
+
+        <form action="completed" method="post">
 
           {{ govukRadios({
           idPrefix: "edu-have-you",
           name: "eduHaveYou",
-          classes: "govuk-radios--inline",
+          classes: "govuk-radios--stacked",
           items: [{
-            value: "Yes~course-completed",
+            value: "Yes~course-name",
             checked: checked("eduHaveYou", "Yes"),
             text: "Yes"
           }, {
-            value: "No~/nsjsa/to-do-11",
+            value: "No~course-name-current",
             checked: checked("eduHaveYou", "No"),
-            text: "No"
+            text: "No, the course is ongoing"
           }]
         }) }}
 
