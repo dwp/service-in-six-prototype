@@ -24,12 +24,23 @@
           <h1 class="govuk-heading-xl">Your responsibilities</h1>
           <h2 class="govuk-heading-m">Thank you, Firstname</h2>
           <div class="govuk-inset-text">
-            <strong>It's important that you understand that in return for your New Style payment, you're agreeing to look for work.</strong>
-            <p class="govuk-body govuk-!-margin-top-3">You'll need to commit to doing everything you reasonably can to find and take paid work. Your work coach will help you agree your commitments.</p>
-          </div>
-          {% from "govuk/components/button/macro.njk" import govukButton %}
+            <strong>It’s important that you understand that in return for your New Style payment, you may need to agree a ‘Claimant Commitment’. DWP will contact you within 10 working days to agree a ‘Claimant Commitment’ if appropriate.</strong>
+            <p class="govuk-body govuk-!-margin-top-3">You will be asked to:</p>
+            <ul class="govuk-list--bullet">
+              <li>
+    explain how your illness or disability affects your ability to work</a>
+            </li>
+            <li>
+    provide medical evidence</a>
+          </li>
+          <li>
+    agree to tell your local Jobcentre Plus if your circumstances change</a>
+        </li>
+      </ul>
+    </div>
+    {% from "govuk/components/button/macro.njk" import govukButton %}
 
-          {{ govukCheckboxes({
+    {{ govukCheckboxes({
               idPrefix: "confirm",
               name: "confirm",
               items: [
@@ -39,13 +50,13 @@
                   }
               ]
           }) }}
-          {{ govukButton({
+    {{ govukButton({
   text: "Continue",
   href: "declaration"
 }) }}
-        </div>
-      </div>
-    </main>
   </div>
+</div>
+</main>
+</div>
 
 {% endblock %}
