@@ -14,7 +14,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form id="form" method="post" action="status">
+      <form id="form" method="post" action="/nsesa/to-dos/to-do-4">
 
         <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
           <span class="govuk-caption-xl">Work and earnings</span>
@@ -26,7 +26,7 @@
         <div class="govuk-form-group">
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="work-1" name="work" type="radio" value="Yes~employment-status">
+              <input class="govuk-radios__input" id="work-1" name="work" type="radio" value="Yes~/nsesa/3-work-earnings/employment-status">
               <label class="govuk-label govuk-radios__label" for="work-1">
             Yes, I’m employed or self-employed
           </label>
@@ -34,7 +34,7 @@
             <!-- If user answers yes to getting SSP in eligibility, then ask when it ends -->
             {% if (data['statutory-pay'] == "yes") %}
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="work-3" name="work" type="radio" value="No~/nsesa/to-dos/to-do-1" aria-controls="no-reveal">
+                <input class="govuk-radios__input" id="work-3" name="work" type="radio" value="No~/nsesa/to-dos/to-do-4" aria-controls="no-reveal">
                 <label class="govuk-label govuk-radios__label" for="work-3">
             No, I’m unemployed
           </label>
